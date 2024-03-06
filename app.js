@@ -1,33 +1,36 @@
 function ans() {   
         var name1 = document.querySelector('.name1')
+
         var clas = document.querySelector('.class')
 
         var num1 = document.querySelector('.num1');
-        var eng = parseFloat(num1.value);
     
         var num2 = document.querySelector('.num2');
-        var urdu = parseFloat(num2.value);
     
         var num3 = document.querySelector('.num3');
-        var math = parseFloat(num3.value);
+
+        var check = document.querySelector('.check')
     
+
+
+
         var totalMarks = 300;
-        var obtainMarks = eng + urdu + math;
+        var obtainMarks = +num1.value + +num2.value + +num3.value;
         var percentage = (obtainMarks / totalMarks) * 100;
 
-
         
-        if (eng > 100 || eng < 0) {
-            document.write("check English Marks <br>")  
+        if (+num1.value > 100 || +num1.value < 0) {
+            check.innerHTML = "check English Marks <br>"
         }
-        if (urdu > 100 || urdu < 0) {
-            document.write("check Urdu Marks<br>")  
+        else if (+num2.value > 100 || +num2.value < 0) {
+            check.innerHTML = "check urdu Marks <br>"
         }
-        if (eng > 100 || eng < 0) {
-            document.write("check Math Marks<br>")  
+        else if (+num3.value > 100 || +num3.value< 0) {
+            check.innerHTML = "check Math Marks <br>"
         }
+        else{check.innerHTML = ""}
 
-        if (eng,urdu,math > 100 || percentage > 100 ) {
+        if (+num1.value , +num2.value , +num3.value > 100 || percentage > 100 ) {
             grade = "error"
             percentage = "error"
             obtainMarks = "error"
@@ -68,14 +71,97 @@ function ans() {
 
 
 
+        // document.write(`hy  ${name1.value}<br>`)
+        // document.write(`your  ${clas.value}  class result is here <br>`)
 
-        document.write(`hy  ${name1.value}<br>`)
-        document.write(`your  ${clas.value}  class result is here <br>`)
+        // document.write(`Marks = ${totalMarks}/${obtainMarks}<br>`)
 
-        document.write(`Marks = ${totalMarks}/${obtainMarks}<br>`)
+        // document.write(`your percentage is = ${percentage} %<br>`)
+        // document.write(`your Grade is = ${grade}<br>`)
 
-        document.write(`your percentage is = ${percentage} %<br>`)
-        document.write(`your Grade is = ${grade}<br>`)
+      
 
+        var name2 = document.querySelector(".name2")
+        name2.innerHTML = `hy  ${name1.value}<br>`
+
+        
+    
+        var class2 = document.querySelector(".class2")
+        class2.innerHTML = `your  ${clas.value}  class result is here <br>`
+        
+        var marks = document.querySelector(".marks")
+        marks.innerHTML = `Marks = ${totalMarks}/${obtainMarks}<br>`
+        
+        var percentage1 = document.querySelector(".percentage1")
+        percentage1.innerHTML = `your percentage is = ${percentage} %<br>`
+        
+        var grade1 = document.querySelector(".grade1")
+        grade1.innerHTML = `your Grade is = ${grade}<br>`
+        
+
+
+
+        // name1.value = ""
+        // clas.value = ""
+
+        // totalMarks = ""
+
+        // percentage = ""
+        // grade =""
+
+
+        // head = document.querySelector(".head")
+        // head.innerHTML = "farhan"
+        // console.log(head.innerHTML);
+        
     }
+
+    // name2.innerHTML = ""
+    // class2.innerHTML = ""
+    // marks.innerHTML = ""
+    // percentage1.innerHTML = ""
+    // grade1.innerHTML = ""
+
+
+
+// function ans() {
+    
+
+//     var name2 = document.querySelector(".name2")
+//         name2.innerHTML = ""
+
+//         var class2 = document.querySelector(".class2")
+//         class2.innerHTML = ""
+        
+//         var marks = document.querySelector(".marks")
+//         marks.innerHTML = ""
+        
+//         var percentage1 = document.querySelector(".percentage1")
+//         percentage1.innerHTML = ""
+        
+//         var grade1 = document.querySelector(".grade1")
+//         grade1.innerHTML = ""
+// }
+
+    // name2 = document.querySelector(".name2")
+    // name2.innerHTML = `hy  ${name1.value}<br>`
+    
+
+    // class2 = document.querySelector(".class2")
+    // class2.innerHTML = `your  ${clas.value}  class result is here <br>`
+    
+    // marks = document.querySelector(".marks")
+    // marks.innerHTML = `Marks = ${totalMarks}/${obtainMarks}<br>`
+    
+    // percentage1 = document.querySelector(".percentage1")
+    // head.innerHTML = `your percentage is = ${percentage} %<br>`
+    
+    // grade1 = document.querySelector(".grade")
+    // head.innerHTML = `your Grade is = ${grade}<br>`
+    
+    
+    
+    
+    
+
     
